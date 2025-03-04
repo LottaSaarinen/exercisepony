@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  max-width: 37em;
+  margin: auto;
+  background-color: #fafafa;
+  height: 100vh;
+}
+
+
+
+.noteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+  width: 100%;
+  max-width: 37em;
+}
+
+textarea {
+  border-radius: 15px;
+  border: 2px solid #f3eee8;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 36em;
+ 
+}
+
+textarea:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fef1f1;
+  
+}
+
+.textarea {
+  max-width: 100%;
+    border: 1px solid #f5e2de;;
+   }
+
+
+.input {
+  border-radius: 15px;
+  border: 2px solid #f5e2de;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 1em;
+  max-width: 36em;
+}
+
+.submitButton {
+  background-color: #f4dddd;
+  color: rgb(6, 6, 6);
+  border-radius: 5px;
+
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #f9f6f5;
+}
+
+.vetList {
+  width: 100%;
+  max-width: 36em;
+  margin: auto;
+}
+
+.vetItem {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  border-bottom: 1px solid #efc2c2;
+  border: grey;
+  color:black;
+}
+
+.vetDetails {
+  flex-grow: 1;
+}
+
+.editButton, .deleteButton {
+  background-color: #cfbab7;
+  color: rgb(2, 2, 2);
+  border-radius: 5px;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteButton {
+  background-color: #a08c5e;
+}
+
+.deleteButton:hover, .editButton:hover {
+  opacity: 0.8;
+}
+
+
+
+
+

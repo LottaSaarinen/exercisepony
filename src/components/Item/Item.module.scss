@@ -1,0 +1,51 @@
+
+@import '../../assets/styles/_config.scss';
+
+.item {
+  color: $color-neutral-dark; 
+  border-bottom: 1px solid rgb(224, 221, 221); 
+  display: flex; 
+ 
+  
+}
+
+.item_data {
+
+
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  flex: 1 1 auto;
+  padding: 0.75rem; 
+ 
+}
+
+
+.item_amount, .item_timespan, .item_average {
+ padding: $container-padding;
+ text-align: right; 
+ display: grid; 
+ grid-template-columns: 1fr 1fr; 
+ flex: 1 1 auto;
+}
+
+
+.item_type, .item_amount {
+  color: #000000; 
+  font-weight: bold; 
+}
+
+.item_edit {
+  max-width: 2rem; 
+  min-width: 2rem; 
+  background-color: $color-neutral-lighter; 
+  color: $color-neutral-dark; 
+  display: none; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 1.75rem; 
+}
+
+
+.item:hover .item_edit {
+  display: flex; 
+}

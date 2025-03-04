@@ -1,0 +1,23 @@
+// Tuodaan konfiguraatiotiedosto, joka saattaa sisältää globaaleja värejä ja asetuksia.
+@import '../../assets/styles/_config.scss'; 
+
+// Määritellään tyylit .content-elementille, joka voi sisältää liukusäätimen.
+.content {
+    overflow-y: auto;                      // Sallitaan pystysuuntainen vieritys, jos sisältö ylittää näkyvän alueen.
+    scrollbar-color: $color-neutral-light $color-neutral-lighter; // Määritellään vierityspalkin värit: thumb (palkki) ja track (tausta).
+}
+
+// Määritellään tyylit Webkit-pohjaiselle vierityspalkille (Chrome, Safari, jne.).
+.content::-webkit-scrollbar {
+    width: 0.5rem;                        // Asetetaan vierityspalkin leveys (0.5 rem).
+}
+
+// Määritellään vierityspalkin "thumb" eli se osa, jota käyttäjä voi liu'uttaa.
+.content::-webkit-scrollbar-thumb {
+    background: $color-neutral-lighter;    // Asetetaan thumb-palkille väri (käytetään globaalisti määriteltyä väriä).
+}
+
+// Määritellään vierityspalkin tausta ("track"), joka näkyy, kun thumb ei ole päällä.
+.content::-webkit-scrollbar-track {
+    background: $color-neutral-lightest;   // Asetetaan taustalle vaaleampi väri (käytetään globaalisti määriteltyä väriä).
+}

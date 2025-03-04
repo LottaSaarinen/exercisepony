@@ -1,0 +1,50 @@
+@import '../../assets/styles/_config.scss';
+.button {
+  background-color: $color-neutral-light;
+  color: $color-neutral-darkest;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 0.3em 0.3em;
+  margin: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+}
+.button:active {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.button:hover {
+  opacity: 1;
+}
+.button:disabled {
+  background-color: $color-neutral-light;
+  color: $color-neutral;
+  box-shadow: none;
+  opacity: 1;
+}
+.button_primary {
+  background-color: $color-primary;
+  color: $color-neutral;
+}
+.button_secondary {
+  background-color: $color-secondary;
+  color: $color-neutral;
+}
+.button_floating {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 1rem;
+  border-radius: 50%;
+  font-size: 2.7em;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_container > div {
+  transform: translateZ(0);
+}

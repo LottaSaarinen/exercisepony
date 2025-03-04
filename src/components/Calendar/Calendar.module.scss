@@ -1,0 +1,111 @@
+@import '../../assets/styles/_config.scss';
+.settings_profile {
+  display: flex;                    
+  align-items: center;              
+  justify-content: space-between;   
+  font-size: 1em;                
+}
+.settings_user {
+
+display: flex;                    
+  align-items: center;              
+}
+
+
+.settings_user img {
+  width: 4.2rem;                    
+  height: 4.2rem;                   
+  border-radius: 50%;               
+  margin-right: 1.1rem; 
+  margin-left: 2em;                 
+}
+
+
+.userbutton{
+  display: flex;                    
+  padding-right: 2em;
+  padding-top: 1em;           
+  justify-content: flex-end;  
+}
+
+
+p{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.tile {
+  color:black;
+  background-color: #fff; 
+  border: 1px solid #fbd7d7; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.tile:hover {
+  background-color: #f0f0f0; 
+}
+.calendarContainer {
+max-width: 38em;
+height: auto;
+margin-left: 2em;
+margin-right: 2em;
+
+background-color: rgb(250, 247, 248); 
+padding: 20px; 
+color:black;
+border-radius: 10px; 
+
+
+}
+
+.eventDay {
+border: 2px solid #e4d7d7;
+background-color: #fcecf7; 
+color: #000; 
+font-weight: bold; 
+border-radius: 50%; 
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+}
+
+h4{
+margin-top: 2em;
+font-size: 2em;
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+}
+.note{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  
+   justify-content: space-between;     
+   width: 100%;
+   max-width: 38em;
+   border-radius: 10px; 
+
+}
