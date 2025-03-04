@@ -9,10 +9,10 @@ import { readAndCompressImage } from 'browser-image-resizer';
 
 
 const resizeConfig = {
-  quality: 0.7, // Kuvan laatu (0.7 = 70%)
-  maxWidth: 1500, // Maksimi leveys
-  maxHeight: 1500, // Maksimi korkeus
-  autoRotate: true, // Käännä kuva automaattisesti
+  quality: 0.7, 
+  maxWidth: 1500, 
+  maxHeight: 1500, 
+  autoRotate: true, 
 };
 
 function Photos() {
