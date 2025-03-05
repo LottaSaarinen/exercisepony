@@ -101,7 +101,7 @@ function Shoe() {
   return (
     <div className={styles.tekstilaatikko} style={{ padding: '2em', maxWidth: '38em' }}>
       <h2>Kengitykset ja lihashuolto</h2>
-      
+
       <form onSubmit={handleAddShoe}>
         <div>
           <input
@@ -109,10 +109,10 @@ function Shoe() {
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
+            
             style={{
               borderRadius: '10px',
               border: '1px solid #ccc',
-              width: 'auto',
               padding: '0.5em',
               marginBottom: '0.5em'
             }}
@@ -125,9 +125,9 @@ function Shoe() {
             required
             placeholder="lisätiedot✍🏽"
             rows="3"
-            cols="auto"
+            cols="60"
             style={{
-              width: '100%',
+             
               padding: '0.5em',
               borderRadius: '10px',
               border: '1px solid #ccc',

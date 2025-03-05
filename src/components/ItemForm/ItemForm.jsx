@@ -43,6 +43,7 @@ function ItemForm(props) {
             <div>
               <label htmlFor='type'>Treenityyppi</label>
               <select id='type' name='type' onChange={handleChange} value={values.type}>
+              <option value="">(valitse)</option>
               <option value='vapaapäivä'>vapaapäivä</option>
                 <option value='kävely'>kävely</option>
                 <option value='juoksutus'>juoksutus</option>

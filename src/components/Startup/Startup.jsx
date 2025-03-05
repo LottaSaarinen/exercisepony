@@ -29,7 +29,16 @@ function Startup (props) {
     
       <div>Tervetuloa käyttämään hevosentreenisovellusta,
            jolla voi seurata hevosen treenejä sekä muita tapahtumia.</div>
-      <Button onClick={signInGoogle}>Kirjaudu Google-tunnuksilla</Button>
+
+     
+            <Button onClick={signInGoogle}>Kirjaudu Google-tunnuksilla</Button>
+
+            <div>Google hoitaa kirjautumisen salasanan käsittelyyn liittyvät turvallisuusprosessit.
+            Sovelluskehittäjällä ei ole pääsyä käyttäjän salasanoihin.</div>
+            <div>Firebase-sovelluksen tietokantaan tallennettavat tiedot salataan sekä levossa,
+             että siirron aikana. </div>
+
+    
     </div>
   )
 }

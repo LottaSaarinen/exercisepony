@@ -45,7 +45,7 @@ form {
   border: 2px solid #f8ddd6; 
   padding: 20px; 
   background-color: #f9f9f9; 
-  box-shadow: 0 4px 8px rgba(179, 177, 177, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif; 
   max-width: 36em; 
   margin: 20px auto;
@@ -55,14 +55,10 @@ form {
 
 
 form:hover {
-  box-shadow: 0 6px 12px rgba(154, 151, 151, 0.2); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
   background-color: #fef1f1; 
 }
 
 .textarea{
   border-radius: 15px;
-}
-.tekstilaatikko
-{
-width:3em;
 }

@@ -107,7 +107,6 @@ function Competition() {
             style={{
               borderRadius: '10px',
               border: '1px solid #ccc',
-              width: '100%',
               padding: '0.5em',
               boxSizing: 'border-box'
             }}
@@ -119,12 +118,11 @@ function Competition() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
-            rows="2"
+            rows="3"
             cols="60"
             style={{
               borderRadius: '10px',
               border: '1px solid #ccc',
-              width: '100%',
               padding: '0.5em',
               boxSizing: 'border-box'
             }}
