@@ -32,12 +32,14 @@ function Startup (props) {
 
      
             <Button onClick={signInGoogle}>Kirjaudu Google-tunnuksilla</Button>
-
+            <div className={styles.up}>
             <div>Google hoitaa kirjautumisen salasanan käsittelyyn liittyvät turvallisuusprosessit.
             Sovelluskehittäjällä ei ole pääsyä käyttäjän salasanoihin.</div>
+            
             <div>Firebase-sovelluksen tietokantaan tallennettavat tiedot salataan sekä levossa,
-             että siirron aikana. </div>
-
+             että siirron aikana. Sovelluskehittäjä tai käytettävän tilin ulkopuolinen käyttäjä
+              ei näe sovellukseen tallennettuja tietoja </div>
+</div>
     
     </div>
   )

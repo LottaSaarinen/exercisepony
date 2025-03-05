@@ -36,7 +36,7 @@ function Header() {
                   <img src={pills} alt="vet" style={{ width: '35px',  height: 'auto' }} /></NavLink></div>
 
           
-      <div><NavLink to="https://hepankuluappi.web.app"><img src={pay} alt="pay" style={{ width: '35px',  height: 'auto' }} /></NavLink></div>
+      <div><NavLink to="https://billspony.web.app/"><img src={pay} alt="pay" style={{ width: '35px',  height: 'auto' }} /></NavLink></div>
 
 
 
