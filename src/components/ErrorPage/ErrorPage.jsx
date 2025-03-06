@@ -8,10 +8,11 @@ function ErrorPage() {
 
    return (
       <div className={styles.errorpage}>  
-         <h2>Hupsis!</h2>  
-         <p>Valitettavasti tapahtui odottamaton virhe.</p>  
-         <p>{error.statusText || error.message}</p> 
-      </div>
+      <h2>Oops!</h2>  
+      <p>Unfortunately, an unexpected error occurred.</p>  
+      <p>{error.statusText || error.message}</p>  
+  </div>
+  
    )
 }
 

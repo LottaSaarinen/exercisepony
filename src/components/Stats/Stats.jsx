@@ -6,7 +6,7 @@ import { ComposedChart } from 'recharts';
 
 function Stats(props) {
   const [chartData, setChartData] = useState([]);
-  const [timeRange, setTimeRange] = useState(30); // Aikaraja (default 2 viikkoa)
+  const [timeRange, setTimeRange] = useState(14); 
   const [linedata, setLinedata] = useState([]);
   
   const locale = "fi-FI";
