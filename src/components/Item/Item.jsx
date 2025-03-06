@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Item({ data, ...props }) {
 
-  const locale = "fi-FI";
+  const locale = "en-US";
 
   const exerciseDate = data.exerciseDate ? new Date(data.exerciseDate).toLocaleDateString(locale) : null;
 

@@ -33,7 +33,8 @@ function Startup (props) {
 <div className={styles.up}>
   <div>Google handles the security processes related to password management. The app developer does not have access to the user's passwords.</div>
   
-  <div>Data stored in the Firebase app database is encrypted both at rest and during transmission. The app developer or any external user of the account cannot see the data stored in the app.</div>
+  <div>Data stored in the Firebase app database is encrypted both at rest and during transmission.
+     The app developer or any external user of the account cannot see the data stored in the app.</div>
 </div>
 
     
