@@ -178,7 +178,7 @@ function Competition() {
               <div style={{ display: 'flex', gap: '1em' }}>
                 <Button onClick={() => handleEditCompetition(index)}>Update</Button>
                 {isEditing && editIndex === index && (
-                  <Button onClick={() => handleDeleteCompetition(index)}>Continue/Delete</Button>
+                  <Button onClick={() => handleDeleteCompetition(index)}>Update/Delete</Button>
                 )}
               </div>
             </li>

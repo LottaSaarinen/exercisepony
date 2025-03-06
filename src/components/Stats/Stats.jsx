@@ -122,7 +122,7 @@ function Stats(props) {
 
   return (
     <div className={styles.stats}>
-      <h1>Durations to exercise types</h1>
+      <h1>Stats</h1>
       <br />
       <div>
       <div className={styles.stats}>
