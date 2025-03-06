@@ -100,7 +100,7 @@ function Shoe() {
 
   return (
     <div className={styles.tekstilaatikko} style={{ padding: '2em', maxWidth: '38em' }}>
-      <h2>Kengitykset ja lihashuolto</h2>
+      <h2>Hoof and muscle care</h2>
 
       <form onSubmit={handleAddShoe}>
         <div>
@@ -123,7 +123,7 @@ function Shoe() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
-            placeholder="lisätiedot✍🏽"
+            placeholder="✍🏽"
             rows="3"
             cols="60"
             style={{
@@ -135,7 +135,7 @@ function Shoe() {
           />
         </div>
         <Button type="submit">
-          Lisää
+          Add
         </Button>
       </form>
 
@@ -158,9 +158,9 @@ function Shoe() {
                 <span>{shoeItem.description}</span>
               </div>
               <div style={{ display: 'flex', gap: '1em' }}>
-                <Button onClick={() => handleEditShoe(index)}>Muokkaa</Button>
+                <Button onClick={() => handleEditShoe(index)}>Update</Button>
                 {isEditing && editIndex === index && (
-                  <Button onClick={() => handleDeleteShoe(index)}>Poista</Button>
+                  <Button onClick={() => handleDeleteShoe(index)}>Update/Delete</Button>
                 )}
               </div>
             </li>

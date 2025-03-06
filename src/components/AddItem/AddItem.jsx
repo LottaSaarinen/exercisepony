@@ -6,7 +6,7 @@ function AppItem(props) {
 
   return (
     <div className={styles.additem}>
-      <h2>Uuden merkinnän lisääminen</h2>
+      <h2>Add New Exercise</h2>
       <ItemForm onItemSubmit={props.onItemSubmit} 
                 typelist={props.typelist} />
 

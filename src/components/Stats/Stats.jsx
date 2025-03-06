@@ -11,45 +11,50 @@ function Stats(props) {
   
   const locale = "fi-FI";
   const colorMap = {
-    "vapaapäivä": "#ebfffc",  // vaalea harmaa
-    "kävely": "#dedcdc",  // vaalean harmaa
-    "juoksutus": "#588c63",  // sammal vihreä
-    "maastatyöskentely": "#abc9b1", // haalea vihreä
+    "rest day": "#ebfffc",  // vaalea harmaa
+    "walking": "#dedcdc",  // vaalean harmaa
+    "lunging": "#588c63",  // sammal vihreä
+    "groundwork": "#abc9b1", // haalea vihreä
    
 
-    "kevyt treeni": "#faf4c3",  // vaalean kelt
-    "normaali treeni": "#00ffd0",  // minttu
-    "raskas treeni": "#8c0f3b",  // tumma punainen
+    "light work out": "#faf4c3",  // vaalean kelt
+    "regular work out": "#00ffd0",  // minttu
+    "intense work out": "#8c0f3b",  // tumma punainen
 
-    "kevyt puomityöskentely": "#f2c89b",  // vaaleanoranssi
-    "normaali puomityöskentely": "#fcb262",  // keski oranssi
-    "raskas puomityöskentely": "#d44d04",  // tumma oranssi
+  
 
-    "kevyt estetyöskentely": "#bff4f5",  // vaaleansininen
-    "normaali estetyöskentely": "#5355d4",  // keski sininen
-    "raskas estetyöskentely": "#15405e",  // tummempi sininen
+   
+    "light trail exercise": "#d2b6d9",  // vaaleanlila
+    "regular trail exercise": "#e37efc",  // keskilila
+    "intense trail exercise": "#69236b",  // tummanlila
 
-    "kilpailut": "#f7cccb",  // kirkas vaaleanpunainen
-    "estekilpailut": "#f0659c",  // kirkas pinkki
-    "kenttäkilpailut": "#822c4f",  // kirkas magenta
-    "valjakkokilpailut": "#704a59",  // tumma lila
-    "koulukilpailut": "#f78e8b",  // tumma lohi
-    "ravikilpailut": "#960c23",  // kirkkaan punanen
+    "light pole exercise": "#f2c89b",  // vaaleanoranssi
+    "regular pole exercise": "#fcb262",  // keski oranssi
+    "intense pole exercise": "#d44d04",  // tumma oranssi
 
-    "maastoilu": "#780c96",  // lila
-    "kevyt maastoilu": "#d2b6d9",  // vaaleanlila
-    "normaali maastoilu": "#e37efc",  // keskilila
-    "raskas maastoilu": "#69236b",  // tummanlila
+    "light s-jumping": "#bff4f5",  // vaaleansininen
+    "normal s-jumping": "#5355d4",  // keski sininen
+    "intense s-jumping": "#15405e",  // tummempi sininen
+     "cross country jumping": 	'#808080', //harmaa
 
-    "valmennus": "#5e5a2c",  // veltasen vihreä
-    "estevalmennus": "#bab57f",  // harmaan keltainen
-    "kouluvalmennus": "#7d7732",  // tumma keltainen
-    "kenttävalmennus": "#d6c50d",  // kirkas keltainen
-    "valjakkovalmennus": "#3b3605",  // vihreän ruskea
+    "competitions": "#f7cccb",  // kirkas vaaleanpunainen
+    "jumping competitions": "#f0659c",  // kirkas pinkki
+    "eventing competitions": "#822c4f",  // kirkas magenta
+    "driving competitions": "#704a59",  // tumma lila
+    "dressage competitions": "#f78e8b",  // tumma lohi
+    "trotting race": "#960c23",  // kirkkaan punanen
 
-    "kevyt ajaminen": "#d4bba5",  // vaalean ruskea
-    "normaali ajaminen": "#85674d",  // tumman ruskea
-    "raskas ajaminen": "#662d04",  // punasen ruskea
+  
+
+    "coaching session": "#5e5a2c",  // veltasen vihreä
+    "jumping coaching": "#bab57f",  // harmaan keltainen
+    "dressage coaching": "#7d7732",  // tumma keltainen
+    "eventing coaching": "#d6c50d",  // kirkas keltainen
+    "driving coaching": "#3b3605",  // vihreän ruskea
+
+    "light driving": "#d4bba5",  // vaalean ruskea
+    "regular driving": "#85674d",  // tumman ruskea
+    "intense driving": "#662d04",  // punasen ruskea
 };
 
   
@@ -117,23 +122,23 @@ function Stats(props) {
 
   return (
     <div className={styles.stats}>
-      <h1>Suoritusajat treenityypeille</h1>
+      <h1>Durations to exercise types</h1>
       <br />
       <div>
       <div className={styles.stats}>
-        <label><h2>Valitse ajanjakso:</h2> </label>
+        <label><h2>Select time period:</h2> </label>
         <select onChange={handleTimeRangeChange} value={timeRange}>
-          <option value={7}>Viikko</option>
-          <option value={14}>Kaksi viikkoa</option>
-          <option value={30}>Kuukausi</option>
-          <option value={90}>Kolme kuukautta</option>
-          <option value={180}>Puoli vuotta</option>
-          <option value={365}>Vuosi</option>
+          <option value={7}>Week</option>
+          <option value={14}>Two weeks</option>
+          <option value={30}>Month</option>
+          <option value={90}>Three months</option>
+          <option value={180}>Half year</option>
+          <option value={365}>Year</option>
         </select>
       </div>
       </div>
        <div className={styles.stats}>
-      <h2>Yhteen laskettu</h2>
+      <h2>Total exercise types</h2>
 <ResponsiveContainer  height={400} width={650}>
   <BarChart data={chartData}>
     <CartesianGrid strokeDasharray="9 9" />
@@ -156,7 +161,7 @@ function Stats(props) {
 </ResponsiveContainer>
 <br></br><br></br>
 
-<h2>Päivämäärän mukaan</h2>
+<h2>By date</h2>
 <ResponsiveContainer   height={450} width={800}>
   
   <ComposedChart data={linedata}>

@@ -99,13 +99,13 @@ function Vet() {
 
   return (
     <div className={styles.container}>
-      <h2>Lääkintä ja eläinlääkärit</h2>
+      <h2>Vet and health</h2>
       <br />
       
       <div className={styles.noteContainer}>
       
     
-        lääkitys, aamulämmöt jne ✍🏽
+        medication, morning temperature ✍🏽
         <textarea
           value={note}
           onChange={(e) => setNote(e.target.value)}  
@@ -114,13 +114,13 @@ function Vet() {
           readOnly={!isEditingNote} 
         />
           {isEditingNote ? (
-          <Button onClick={handleNoteSubmit}>Tallenna</Button>
+          <Button onClick={handleNoteSubmit}>Save</Button>
         ) : (
-          <Button onClick={() => setIsEditingNote(true)}>Muokkaa</Button>
+          <Button onClick={() => setIsEditingNote(true)}>Update</Button>
         )}
       </div>
 
-      Muistiin tallennettavat tiedot
+      Save notes
 
       <form onSubmit={handleAddVet} className={styles.form}>
         <input
@@ -138,7 +138,7 @@ function Vet() {
           cols="60"
           className={styles.textarea}
         />
-        <Button type="submit" className={styles.submitButton}>Lisää</Button>
+        <Button type="submit" className={styles.submitButton}>Add</Button>
       </form>
 
       <div className={styles.vetList}>
@@ -150,9 +150,9 @@ function Vet() {
               {vet.description}
             </div>
 
-            <Button onClick={() => handleEditVet(index)} className={styles.editButton}>Muokkaa</Button>
+            <Button onClick={() => handleEditVet(index)} className={styles.editButton}>Update</Button>
             {isEditing && editIndex === index && (
-              <Button onClick={() => handleDeleteVet(index)} className={styles.deleteButton}>Poista</Button>
+              <Button onClick={() => handleDeleteVet(index)} className={styles.deleteButton}>Update/Delete</Button>
             )}
             <hr />
           </div>

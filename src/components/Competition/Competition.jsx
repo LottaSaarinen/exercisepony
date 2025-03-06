@@ -96,7 +96,7 @@ function Competition() {
 
   return (
     <div className={styles.tekstilaatikko} style={{ padding: '2em', maxWidth: '38em' }}>
-      <h2>Kilpailut</h2>
+      <h2>Competitions</h2>
       <form onSubmit={handleAddCompetition} style={{ marginBottom: '2em' }}>
         <div>
           <input
@@ -114,7 +114,7 @@ function Competition() {
         </div>
         <div>
           <textarea
-            placeholder="Tulokset jne✍🏽."
+            placeholder="Results, comments✍🏽."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
@@ -129,7 +129,7 @@ function Competition() {
           />
         </div>
         <Button type="submit" style={{ marginTop: '1em' }}>
-          {isEditing ? 'Päivitä' : 'Lisää'}
+          {isEditing ? 'Update' : 'Add'}
         </Button>
       </form>
 
@@ -154,7 +154,7 @@ function Competition() {
           ))}
         </ul>
 
-        {/* Kilpailut lista */}
+      
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           {competitions.map((competitionItem, index) => (
             <li
@@ -176,9 +176,9 @@ function Competition() {
               </div>
 
               <div style={{ display: 'flex', gap: '1em' }}>
-                <Button onClick={() => handleEditCompetition(index)}>Muokkaa</Button>
+                <Button onClick={() => handleEditCompetition(index)}>Update</Button>
                 {isEditing && editIndex === index && (
-                  <Button onClick={() => handleDeleteCompetition(index)}>Poista</Button>
+                  <Button onClick={() => handleDeleteCompetition(index)}>Continue/Delete</Button>
                 )}
               </div>
             </li>

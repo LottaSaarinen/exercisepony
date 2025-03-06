@@ -132,7 +132,7 @@ function CalendarApp(props) {
   return (
     <div>
     <div className={styles.userbutton}>
-      <Button primary onClick={logout}>Kirjaudu ulos</Button>
+      <Button primary onClick={logout}>Log out</Button>
     </div>
     <div className={styles.settings_profile}>
       <div className={styles.settings_user}>
@@ -145,8 +145,8 @@ function CalendarApp(props) {
   <div className={styles.calendarContainer}>
   
   
-    <p><Button onClick={() => setIsModalOpen(true)}>Muokkaa</Button></p>
-    <p>valitse päivä ensin</p>
+    <p><Button onClick={() => setIsModalOpen(true)}>Add</Button></p>
+    <p>select a date first</p>
     <p>{currentEvent.date}</p>
 
       <Calendar
@@ -157,7 +157,7 @@ function CalendarApp(props) {
    
   
   
-      <p>Tapahtumat valitulla päivämäärällä:</p>
+      <p>Selected day events:</p>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => (
@@ -166,7 +166,7 @@ function CalendarApp(props) {
             </li>
              ))
         ) : (
-          <li><p>Ei tapahtumia valitulla päivämäärällä.</p></li>
+          <li><p></p></li>
         )}
       </ul>
     </div>
@@ -203,9 +203,9 @@ function CalendarApp(props) {
         cols={80}
       />
       <br />
-      <Button onClick={handleEventSave}>Tallenna</Button>
-      <Button onClick={handleEventDelete}>Poista</Button>
-      <Button onClick={() => setIsModalOpen(false)}>Peruuta</Button>
+      <Button onClick={handleEventSave}>Save</Button>
+      <Button onClick={handleEventDelete}>Delete</Button>
+      <Button onClick={() => setIsModalOpen(false)}>Cancel</Button>
     </Modal>
   
     <div style={{ paddingTop: '3em' }}>
@@ -219,7 +219,7 @@ function CalendarApp(props) {
           className="textarea"
         />
         <div className="button-group">
-          <Button onClick={handleAddNotification}>Lisää</Button>
+          <Button onClick={handleAddNotification}>Add</Button>
         </div>
       </div>
   
@@ -236,7 +236,7 @@ function CalendarApp(props) {
             >
               <span>{notif.notification}</span>
               <Button onClick={() => handleNotificationsDelete(notif.id)} style={{ marginLeft: '1em' }}>
-                Poista
+                Delete
               </Button>
             </li>
           ))}

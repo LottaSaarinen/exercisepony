@@ -6,11 +6,8 @@ function Item({ data, ...props }) {
 
   const locale = "fi-FI";
 
- 
-  // Muunnetaan suorituspäivämäärä oikeaan muotoon
   const exerciseDate = data.exerciseDate ? new Date(data.exerciseDate).toLocaleDateString(locale) : null;
 
-  // Muotoillaan suoritusaika
   const duration = data.duration ? `${data.duration} min` : '';
 
 

@@ -27,19 +27,15 @@ function Startup (props) {
   return (
     <div className={styles.startup}>
     
-      <div>Tervetuloa käyttämään hevosentreenisovellusta,
-           jolla voi seurata hevosen treenejä sekä muita tapahtumia.</div>
+    <div>Welcome to the horse training app, where you can track the horse's training sessions as well as other events.</div>
 
-     
-            <Button onClick={signInGoogle}>Kirjaudu Google-tunnuksilla</Button>
-            <div className={styles.up}>
-            <div>Google hoitaa kirjautumisen salasanan käsittelyyn liittyvät turvallisuusprosessit.
-            Sovelluskehittäjällä ei ole pääsyä käyttäjän salasanoihin.</div>
-            
-            <div>Firebase-sovelluksen tietokantaan tallennettavat tiedot salataan sekä levossa,
-             että siirron aikana. Sovelluskehittäjä tai käytettävän tilin ulkopuolinen käyttäjä
-              ei näe sovellukseen tallennettuja tietoja </div>
+<Button onClick={signInGoogle}>Sign in with Google</Button>
+<div className={styles.up}>
+  <div>Google handles the security processes related to password management. The app developer does not have access to the user's passwords.</div>
+  
+  <div>Data stored in the Firebase app database is encrypted both at rest and during transmission. The app developer or any external user of the account cannot see the data stored in the app.</div>
 </div>
+
     
     </div>
   )

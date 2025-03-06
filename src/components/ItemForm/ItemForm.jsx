@@ -41,49 +41,53 @@ function ItemForm(props) {
         <div className={styles.itemform}>
           <div className={styles.itemform_row}>
             <div>
-              <label htmlFor='type'>Treenityyppi</label>
+              <label htmlFor='type'>Exercise type</label>
               <select id='type' name='type' onChange={handleChange} value={values.type}>
-              <option value="">(valitse)</option>
-              <option value='vapaapäivä'>vapaapäivä</option>
-                <option value='kävely'>kävely</option>
-                <option value='juoksutus'>juoksutus</option>
-                <option value='maastatyöskentely'>maastatyöskentely</option>
+              <option value="">(select)</option>
+              <option value='rest day'>rest day</option>
+                <option value='walking'>walking</option>
+                <option value='lunging'>lunging</option>
+                <option value='groundwork'>groundwork</option>
                
 
-                <option value='kevyt treeni'>kevyt treeni</option>
-                <option value='normaali treeni'>normaali treeni</option>
-                <option value="raskas treeni">raskas treeni</option>
+                <option value='light work out'>light work out</option>
+                <option value='regular work out'>regular work out</option>
+                <option value="intense work out">intense work out</option>
                
-                <option value="maastoilu">maastoilu</option>
-                <option value="kevyt maastoilu">kevyt maastoilu</option>
-                <option value="normaali maastoilu">normaali maastoilu</option>
-                <option value="raskas maastoilu">raskas maastoilu</option>
+                <option value="trail work out">trail work out</option>
+                <option value="light trail"> light trail</option>
+                <option value="regular trail">regular trail</option>
+                <option value="intense trail">intense trail</option>
 
-                <option value="valmennus">valmennus</option>
-                <option value="estevalmennus">estevalmennus</option>
-                <option value="kouluvalmennus">kouluvalmennus</option>
-                <option value="kenttävalmennus">kenttävalmennus</option>
-                <option value="valjakkovalmennus">valjakkovalmennus</option>
+                <option value="coaching session">coaching session</option>
+                <option value="jumping coaching">jumping coaching</option>
+                <option value="dressage coaching">dressage coaching</option>
+                <option value="eventing coaching">eventing coaching</option>
+                <option value="driving coaching">driving coaching</option>
 
-                <option value='kevyt puomityöskentely'>kevyt puomityöskentely</option>
-                <option value='normaali puomityöskentely'>normaali puomityöskentely</option>
-                <option value='raskas puomityöskentely'>raskas puomityöskentely</option>
+                <option value='light pole exercise'>light pole exercise</option>
+                <option value='regular pole exercise'>regular pole exercise</option>
+                <option value='intense pole exercise'>intense pole exercise</option>
                
-                <option value='kevyt estetyöskentely'>estetyöskentely</option>
-                <option value='normaali estetyöskentely'>normaali estetyöskentely</option>
-                <option value='raskas estetyöskentely'>raskas estetyöskentely</option>
+                <option value='light s-jumping'>light s-jumping</option>
+                <option value='normal s-jumping'>normal s-jumping</option>
+                <option value='intense s-jumping'>intense s-jumping</option>
 
-                <option value='kilpailut'>kilpailut</option>
-                <option value='estekilpailut'>estekilpailut</option>
-                <option value='kenttäkilpailut'>kenttäkilpailut</option>
-                <option value='valjakkokilpailut'>valjakkokilpailut</option>
-                <option value='koulukilpailut'>koulukilpailut</option>
-                <option value='ravikilpailut'>ravikilpailut</option>
+                    
+              
+                <option value='cross country jumping'>cross country jumping</option>
+               
+                <option value='competitions'>competitions</option>
+                <option value='s-jumping competitions'>show jumping competitions</option>
+                <option value='eventing competitions'>eventing competitions</option>
+                <option value='driving competitions'>driving competitions</option>
+                <option value='dressage competitions'>dressage competitions</option>
+                <option value='trotting race'>trotting race</option>
 
            
-                <option value='kevyt ajaminen'>kevyt ajaminen</option>
-                <option value='normaali ajaminen'>normaali ajaminen</option>
-                <option value='raskas ajaminen'>raskas ajaminen</option>
+                <option value='light driving'>light driving</option>
+                <option value='regular driving'>regular driving</option>
+                <option value='intense driving'>intense driving</option>
   {props.typelist.map(type => <option key={type} value={type}>{type}</option>)}
 </select>
 
@@ -95,7 +99,7 @@ function ItemForm(props) {
           <div className={styles.itemform_row}>
             <div>
             
-              <label htmlFor='duration'>treeniin käytetty aika</label>
+              <label htmlFor='duration'>Duration</label>
               <input 
                 id='duration' 
                 type='number' 
@@ -109,7 +113,7 @@ function ItemForm(props) {
             
           <div className={styles.itemform_row}>
             <div>
-              <label htmlFor='exerciseDate'>pvm</label>
+              <label htmlFor='exerciseDate'>Exercise date</label>
               <input 
                 id='exerciseDate' 
                 type='date' 
@@ -122,18 +126,18 @@ function ItemForm(props) {
 
           <div className={styles.itemform_row}>
             <div>
-              <label htmlFor='rating'>Arvio</label>
+              <label htmlFor='rating'>Rating</label>
               <select 
                 id='rating' 
                 name='rating' 
                 onChange={handleChange} 
                 value={values.rating}>
-                <option value="">(valitse)</option>
-                <option value='sujui tosi hyvin'>sujui tosi hyvin</option>
-                <option value='sujui melko hyvin'>sujui melko hyvin</option>
-                <option value='sujui normaalisti'>sujui normaalisti</option>
-                <option value="ei sujunut kovin hyvin">ei sujunut kovin hyvin</option>
-                <option value="ei sujunut ollenkaan hyvin">ei sujunut ollenkaan hyvin</option>
+                <option value="">(select)</option>
+                <option value='went really well'>really well</option>
+                <option value='fairly well'>fairly well</option>
+                <option value='normally'>normally</option>
+                <option value="not so well">not so well</option>
+                <option value="not well at all">not well at all</option>
                 
   
               </select>
@@ -142,7 +146,7 @@ function ItemForm(props) {
 
           <div className={styles.itemform_row}>
             <div>
-              <label htmlFor='comment'>Kommentti</label>
+              <label htmlFor='comment'>Comment</label>
               <textarea 
                 id='comment' 
                 name='comment' 
@@ -154,14 +158,14 @@ function ItemForm(props) {
 
           <div className={styles.itemform_row}>
             <div>
-              <Button onClick={handleCancel}>PERUUTA</Button>
+              <Button onClick={handleCancel}>CANCEL</Button>
             </div>
             <div>
               <Button 
                 primary
                 disabled={values.type && values.duration && values.exerciseDate ? "" : "true"}
                 type='submit'>
-                { props.formData ? "TALLENNA" : "LISÄÄ" }
+                { props.formData ? "SAVE" : "ADD" }
               </Button>
             </div>
           </div>
@@ -169,7 +173,7 @@ function ItemForm(props) {
           { props.onItemDelete ? 
             <div className={styles.itemform_row}>
               <div>
-                <Button secondary onClick={handleDelete}>POISTA</Button>
+                <Button secondary onClick={handleDelete}>DELETE</Button>
               </div>
             </div>
             : null }

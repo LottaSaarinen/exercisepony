@@ -46,7 +46,7 @@ function Notebook() {
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '50px' }}>
-      <h2 style={{ textAlign: 'center' }}>Ruokinta ja lisärehut</h2>
+      <h2 style={{ textAlign: 'center' }}>Feeding and supplements</h2>
       <br></br>
       <div style={{ marginBottom: '20px' }}>
         <textarea
@@ -72,14 +72,14 @@ function Notebook() {
             onClick={handleSaveClick} 
             style={{ padding: '10px 20px', backgroundColor: 'rgb(175, 76, 135)', color: '#FADADD', borderRadius: '5px', cursor: 'pointer' }}
           >
-            Tallenna ruokinnan muutokset
+            Save the updated feeding
           </Button>
         ) : (
           <Button 
             onClick={handleEditClick} 
             style={{ padding: '10px 20px', backgroundColor: '#f0ss43', color: 'grey', borderRadius: '5px', cursor: 'pointer' }}
           >
-            Muokkaa ruokintaa
+           Update feeding
           </Button>
         )}
       </div>

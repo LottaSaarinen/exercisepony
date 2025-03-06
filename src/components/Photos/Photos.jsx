@@ -79,14 +79,12 @@ function Photos() {
             });
           }
         } catch (error) {
-          console.error("Virhe kuvan pienentämisessä", error);
+          console.error("Too big picture", error);
         }
       });
     },
     accept: 'image/*', // Hyväksytään vain kuvatiedostot
   });
-
-  // Funktio Base64-muotoon muuntamiseen
   const convertToBase64 = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -110,7 +108,7 @@ function Photos() {
     <div>
       <div {...getRootProps()} style={{ border: '2px dashed #ccc', padding: '20px' }}>
         <input {...getInputProps()} accept="image/*" />
-        <p>Vedä ja pudota kuvia tähän, tai valitse tiedosto.</p>
+        <p>Drag and drop images here or select a file.</p>
       </div>
 
       <div>
@@ -137,12 +135,12 @@ function Photos() {
                 }}
               />
               <Button onClick={() => handleRemovePhoto(photo.id)} style={{ marginTop: '1em' }}>
-                <p>Poista</p>
+                <p>Delete picture</p>
               </Button>
             </div>
           ))
         ) : (
-          <p>Ei tallennettuja kuvia.</p>
+          <p></p>
         )}
       </div>
     </div>
