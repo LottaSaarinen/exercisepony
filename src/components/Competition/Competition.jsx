@@ -13,8 +13,9 @@ function Competition() {
   const [editIndex, setEditIndex] = useState(null);
   const [user, setUser] = useState(null);
   const [competitionHistory, setCompetitionHistory] = useState([]);
-
+  const [locale, setLocale] = useState('en-US'); 
   const auth = getAuth();
+  const formattedDate = new Date().toLocaleDateString(locale);  // Näyttää päivämäärän valitussa kielessä
 
   useEffect(() => {
     const unsubscribe = onSnapshot(
@@ -96,11 +97,12 @@ function Competition() {
 
   return (
     <div className={styles.tekstilaatikko} style={{ padding: '2em', maxWidth: '38em' }}>
-      <h2>Competitions</h2>
+      <h2>Competition</h2>
       <form onSubmit={handleAddCompetition} style={{ marginBottom: '2em' }}>
         <div>
           <input
             type="date"
+            locale={locale} 
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required

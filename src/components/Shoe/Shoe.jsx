@@ -13,7 +13,7 @@ function Shoe() {
   const [editIndex, setEditIndex] = useState(null);
   const [user, setUser] = useState(null);
   const [shoeHistory, setShoeHistory] = useState([]);
-
+  const [locale, setLocale] = useState('en-US'); 
   const auth = getAuth();
 
   useEffect(() => {
@@ -108,6 +108,7 @@ function Shoe() {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
+            locale={locale} 
             required
             
             style={{

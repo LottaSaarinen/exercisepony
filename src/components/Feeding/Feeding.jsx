@@ -9,7 +9,7 @@ function Notebook() {
   const [isEditing, setIsEditing] = useState(false);  
   const [user, setUser] = useState(null);  
   const auth = getAuth();
-
+  const [locale, setLocale] = useState('en-US'); 
   
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function ItemForm(props) {
   
   const navigate = useNavigate()
-
+  const locale='en-US';  
   const submit = () => {
      let storedValues = Object.assign({}, values)  
      
@@ -117,6 +117,7 @@ function ItemForm(props) {
               <input 
                 id='exerciseDate' 
                 type='date' 
+                locale={locale} 
                 name='exerciseDate' 
                 onChange={handleChange} 
                 value={values.exerciseDate} 

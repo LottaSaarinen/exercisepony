@@ -14,7 +14,7 @@ function Vet() {
   const [isEditing, setIsEditing] = useState(false);  
   const [editIndex, setEditIndex] = useState(null);  
   const [user, setUser] = useState(null);  
-
+const [locale, setLocale] = useState('en-US'); 
   const firestore = getFirestore(firebaseApp);
   const auth = getAuth(firebaseApp);
 
@@ -127,6 +127,7 @@ function Vet() {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          locale={locale} 
           required
           className={styles.input}
         />

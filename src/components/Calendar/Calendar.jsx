@@ -17,7 +17,7 @@ function CalendarApp(props) {
   const [notification, setNotification] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [user, setUser] = useState(null);
-  const [locale, setLocale] = useState('en-US');  // or 'en-US' for English
+  const [locale, setLocale] = useState('en-US');  
 
   const auth = getAuth();
 
@@ -25,7 +25,7 @@ function CalendarApp(props) {
     (event) => new Date(event.date).toDateString() === date.toDateString()
   );
 
-  // tileClassName function should be declared above the return statement
+  
   const tileClassName = ({ date, view }) => {
     if (view === 'month') {
       const eventDates = events.map((event) => new Date(event.date).toDateString());
@@ -150,7 +150,7 @@ function CalendarApp(props) {
           onChange={handleDateChange}
           value={date}
           tileClassName={tileClassName}
-          locale={locale}  // Pass the locale prop here
+          locale={locale} 
         />
   
         <p>Selected day events:</p>
